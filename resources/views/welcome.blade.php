@@ -827,31 +827,6 @@
 </head>
 
 <body class="antialiased">
-    <div class="container mx-auto mt-5 p-4 bg-white rounded-lg shadow-md">
-        <h1 class="text-2xl font-semibold mb-4">Orders</h1>
-        <div class="overflow-x-auto">
-            <table class="min-w-full bg-black">
-                <thead>
-                    <tr>
-                        <th class="py-2 px-4 bg-gray-200 text-gray-600 font-semibold">ID</th>
-                        <th class="py-2 px-4 bg-gray-200 text-gray-600 font-semibold">Status</th>
-                        <th class="py-2 px-4 bg-gray-200 text-gray-600 font-semibold">Total</th>
-                        <th class="py-2 px-4 bg-gray-200 text-gray-600 font-semibold">Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($orders as $order)
-                        <tr class="border-b">
-                            <td class="py-2 px-4">{{ $order['id'] }}</td>
-                            <td class="py-2 px-4">{{ $order['status'] }}</td>
-                            <td class="py-2 px-4">{{ $order['total'] }}</td>
-                            <td class="py-2 px-4">{{ $order['date_created'] }}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
-    </div>
     <div
         class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
         @if (Route::has('login'))
